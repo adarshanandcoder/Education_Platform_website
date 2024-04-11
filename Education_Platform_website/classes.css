@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* text-decoration: none;
+    list-style: none; */
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+.heading{
+    text-align:center;
+    justify-content: center;
+    margin: none;
+    padding:2rem;
+    height:120px;
+    width:100%;
+    background-color:rgb(239, 246, 164);
+    margin-bottom: 30px;
+}
+
+h1{
+    align : center;
+}
+
+ol li{
+    margin-left:30px;
+    text-decoration: none;
+}
+summary{
+    margin-left:10px;
+    text-decoration:none;
+    /* list-style:none; */
+}
+button{
+    background-color: antiquewhite;
+    padding:1rem 2rem;
+}
+img{
+    position:relative;
+    left:50px;
+}
+/* img{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+} */
+/* .maths{
+    position:relative;
+    left:40px;
+    top:137px;
+}
+.science{
+    position:relative;
+    left:25%;
+}
+.english{
+    position:relative;
+    left:50%;
+    top:100px;
+}
+.social{
+    position: relative;
+    left:80%;
+    bottom:275px;
+} */
+.inner{
+    margin-top:200px;
+    margin-left:80px;
+    display:grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    
+}
+body{
+    background:url("logos/class_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ol li a{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover{
+    color: blue;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+        body{
+            background-image: url("loginbackround1.jpg");
+        }
+      form {
+        max-width: 400px;
+        margin: auto;
+        margin-top:70px;
+      }
+      h1{
+        text-align: center;
+      }
+      input[type=text], input[type=password], input[type=tel], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      button a{
+        text-decoration: none;
+        color: white;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      .container {
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Sign Up</h1>
+      <div class="container">
+        <label for="first-name"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="first-name" required>
+
+        <label for="last-name"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="last-name" required>
+
+        <label for="telephone"><b>Telephone Number</b></label>
+        <input type="tel" placeholder="Enter Telephone Number" name="telephone" required>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="emailid"><b>Email-id</b></label>
+        <input type="email" placeholder="Enter your email-id" name="emailid" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit"><a href="/index2.html">Sign Up</a></button>
+      </div>
+    </form>
+  </body>
+</html>

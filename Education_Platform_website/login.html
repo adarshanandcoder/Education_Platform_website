@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- <img src="loginbackgroung1.jpg"> -->
+    <section class="form-section"> 
+        <div class="container">
+            <div class="inner-container">
+                <form action="/signup" method="get">
+                    <h1>Login</h1>
+                    <div class="input-wrap">
+                        <input type="email" placeholder="Email Address" required>
+                        <!-- <label>Email Address</label> -->
+                    </div>
+                    <div class="input-wrap">
+                        <input type="password" placeholder="Password" required>
+                        <!-- <label>Password</label> -->
+                    </div>
+                    <div class="extra-field">
+                        <div class="remember-pass">
+                            <p> </p>
+                        </div>
+                        <div class="forgotpass">
+                            <a href="/signup.html">Sign up</a>
+                        </div>
+                    </div>
+
+                    <div class="login-btn">
+                        <button class="btn"><a href="/index2.html">login</a></button>
+                        <!-- <a href="/index2.html"><button class="btn">login</button></a> -->
+                    </div>
+
+                    <hr>
+                    <meta class="social-icon">
+                        <script src="https://apis.google.com/js/platform.js" async defer></script>
+                            <meta name="google-signin-client_id" content="939545463794-311r71qmfe543r5babb74esao2e3a23q.apps.googleusercontent.com.apps.googleusercontent.com">
+                            <div class="g-signin2" data-onsuccess="onSignIn">
+                       
+                        <button class="fb-btn"><i class="fa fa-facebook">sign in with facebook</i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener('submit',handeleSubmit);
+    
+        function handeleSubmit(event){
+          event.preventDefault();
+          let formdata= new FormData(form);
+          let data = Object.fromEntries(formdata);
+          let jsonData = JSON.stringify(data);
+    
+          fetch('/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type' : 'application/json'
+            },
+            body:jsonData
+          }).then(res => res.json())
+          .then(result = console.log(result))
+          .catch(err => console.log(err))
+        }
+      </script>
+</body>
+</html>
